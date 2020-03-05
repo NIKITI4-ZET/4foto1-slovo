@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4фото1слово</title>
+
+    <center>
+    <style>
+        .image{
+            width: 200px;
+            height: 200px;
+        }
+
+        .field{
+            width: 30px;
+            height: 30px;
+            position: relative;
+            display: inline-block;
+            color: white;
+            border: solid black;
+            color: black;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <img src="Depositphotos_117096532_m-2015.jpg" class="image">
+    <img src="Без%20названия%20(1).jpg" class="image">
+    <br>
+    <img src="Без%20названия.jpg" class="image">
+    <img src="Без%20названия%20(2).jpg" class="image">
+    <br>
+
+    <div class="word">
+        <div class="field" id="1"></div>
+        <div class="field" id="2"></div>
+        <div class="field" id="3"></div>
+    </div>
+
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="О">О</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="С">C</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="Д">Д</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="А">А</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="Ж">Ж</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="В">В</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="Е">Е</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="Р">Р</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="Т">Т</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="И">И</button>
+    <br>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="Б">Б</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="Н">Н</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="М">М</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="Ш">Ш</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="Я">Я</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="З">З</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="Ф">Ф</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="Л">Л</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="К">К</button>
+    <button style="border-radius: 50px; background: black; color: white" onclick="cl(this.id)" id="Ч">Ч</button>
+
+    </center>
+
+    <script>
+        let player_word = ""
+        let word = "США"
+        function cl(clicked_elem) {
+
+            if (document.getElementById("1").innerHTML == '') {
+                document.getElementById("1").innerHTML = document.getElementById(clicked_elem).innerHTML
+                player_word += document.getElementById("1").innerHTML
+            }else if (document.getElementById("2").innerHTML == ''){
+                document.getElementById("2").innerHTML = document.getElementById(clicked_elem).innerHTML
+                player_word += document.getElementById("2").innerHTML
+            }else if (document.getElementById("3").innerHTML == '') {
+                document.getElementById("3").innerHTML = document.getElementById(clicked_elem).innerHTML
+                player_word += document.getElementById("3").innerHTML
+                if (player_word === word){
+                    alert("Неправильно")
+                }else{
+                    alert("Правильно")
+
+                }
+            }
+            console.log(player_word)
+
+        }
+    </script>
+</body>
+</html>
